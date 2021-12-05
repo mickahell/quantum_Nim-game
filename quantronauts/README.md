@@ -1,37 +1,4 @@
 # Nim game
-## Team name : Quantronauts
-### Team members
-<table>
-	<thead>
-		<tr>
-			<th align="center">Members</th>
-			<th align="center">email@</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td align="center">Michael Rollin</td>
-			<td align="center">mika89700@[...]</td>
-		</tr>
-		<tr>
-			<td align="center">Sahar Ben Rached</td>
-			<td align="center">sahar.benrached1@[...]</td>
-		</tr>
-		<tr>
-			<td align="center">Alain Chancé</td>
-			<td align="center">alain.chance@[...]</td>
-		</tr>
-		<tr>
-			<td align="center">Tamas Varga</td>
-			<td align="center">varga78t@[...]</td>
-		</tr>
-    <tr>
-			<td align="center">Laurent Querella</td>
-			<td align="center">lquerella@[...]</td>
-		</tr>
-	</tbody>
-</table>
-
 ## Game
 ### Running the game
 To run the program just launch : `python3 game.py`
@@ -126,18 +93,3 @@ Then we continue wit the sticks remaning until we don't have stick at all after 
 A 2 players mode is available is you want to play with a friend or with your cat
 #### 1 player
 A 1 player is available and you'll fight against a quantum ia made with a quadratical equation, QAOA and Grover.
-
---> **Explanation coming soon !**
-
-<pre>
-q0|0>  ---------------------------------
-
-q1|0>  ---------------------------------
-
-q2|0>  ---------------------------------
-
-q3|0>  ---------------------------------
-
-psi|+> ---------------------------------
-</pre>
-
