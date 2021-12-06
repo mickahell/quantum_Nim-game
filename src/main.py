@@ -1,3 +1,4 @@
+"""Main functions."""
 from typing import Tuple
 
 from qiskit import Aer, QuantumCircuit, QuantumRegister, execute
@@ -116,7 +117,7 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
                 job = execute(qc_board, backend_sim, shots=1, memory=True)
                 result_memory = job.result().get_memory()
                 result = result_memory[0]
-                for i in range(len(result)):
+                for i, _ in enumerate(result):
                     if result[i] == "0":
                         stick += 1
                 print("stick left : ", stick)
