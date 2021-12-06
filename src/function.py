@@ -19,3 +19,4 @@ def control_input(options: int, input_ctl: int) -> bool:
             else:
                 print("Please give a valid gate between {}".format(options))
                 return False
+    return False
