@@ -12,11 +12,9 @@ def control_input(options: int, input_ctl: int) -> bool:
                 return True
             else:
                 print("Please give a number between 0 and {}.".format(options))
-                return False
         else:
             if input_ctl in options:
                 return True
             else:
                 print("Please give a valid gate between {}".format(options))
-                return False
     return False
