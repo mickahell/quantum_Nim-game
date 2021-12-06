@@ -1,3 +1,4 @@
+"""Input controler to check the input from player."""
 def control_input(options: int, input_ctl: int) -> bool:
     """Function to control input of user.
     Args:
@@ -11,8 +12,10 @@ def control_input(options: int, input_ctl: int) -> bool:
                 return True
             elif options + 1 < 3:
                 print("Please give a number between 0 and {}.".format(options))
+                return False
             else:
                 print("Please give a number between 0 and {}.".format(3))
+                return False
         else:
             if input_ctl in options:
                 return True
