@@ -2,7 +2,7 @@
 from typing import Tuple
 
 from qiskit import Aer, QuantumCircuit, QuantumRegister, execute
-from src.function import control_input
+from src.function import control_input, who_start
 from src import draw, ia
 
 
@@ -22,8 +22,8 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
     if nb_player == "1":
         computer[1] = True
 
-    begin = str(input("Player1 start ? y/n : "))
-    if begin == "y":
+    begin = who_start(psi=0.5, backend_sim)
+    if begin == 0:
         player1[0] = True
     else:
         player2[0] = True
