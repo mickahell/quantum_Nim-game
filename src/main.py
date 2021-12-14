@@ -87,6 +87,7 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
 
             # Computer choice
             if computer[0] is True and computer[1] is True:
+                print("The robot is thinking ...")
                 if stick == 1 and nb_qubit == 1:
                     qc_board.x(stick - 1)
                     drawing_add = "x " + drawing_add
