@@ -1,4 +1,5 @@
 """Input controler to check the input from player."""
+import math
 from qiskit import Aer, QuantumCircuit, execute
 
 
@@ -22,7 +23,8 @@ def control_input(options: int, input_ctl: int) -> bool:
                 print("Please give a valid gate between {}".format(options))
     return False
 
-def who_start(psi: int, backend_sim: Aer) -> int:
+
+def who_start(psi: float, backend_sim: Aer) -> int:
     """Function to check who start.
     Args:
         psi: angle for the qubit

@@ -22,9 +22,10 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
     if nb_player == "1":
         computer[1] = True
 
-    begin = who_start(psi=0.5, backend_sim)
+    begin = who_start(psi=0.5, backend_sim=backend_sim)
     if begin == 0:
         player1[0] = True
+        print("You start")
     else:
         player2[0] = True
         computer[0] = True

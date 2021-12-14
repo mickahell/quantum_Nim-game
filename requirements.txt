@@ -1,4 +1,4 @@
 fire
 qiskit
-qiskit-optimization
+qiskit_optimization
 requests
