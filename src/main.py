@@ -26,7 +26,7 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
     print("A quantum process choose who starts... Human or Robot")
     if begin == 0:
         player1[0] = True
-        print("You start")
+        print("Human starts")
     else:
         player2[0] = True
         computer[0] = True
