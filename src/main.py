@@ -18,17 +18,19 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
     play = True
 
     computer = [False, False]
-    nb_player = str(input("How many player ? 1/2 : "))
+    nb_player = "1"
     if nb_player == "1":
         computer[1] = True
 
     begin = who_start(psi=0.5, backend_sim=backend_sim)
+    print("A quantum process choose who start... Human or Robot")
     if begin == 0:
         player1[0] = True
         print("You start")
     else:
         player2[0] = True
         computer[0] = True
+        print("Robot starts")
 
     while play:
         # Generation of the first circuit with 11 qubits
