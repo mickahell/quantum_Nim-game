@@ -6,21 +6,17 @@ from src.function import control_input, who_start
 from src import draw, ia
 
 
-def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
+def battle(player1: list, backend_sim: Aer) -> Tuple:
     """Battle game.
     Args:
         player1: player
-        player2: player if 2 player
         backend_sim: backend for quantum
     Return: winner, looser
     """
 
     play = True
 
-    computer = [False, False]
-    nb_player = "1"
-    if nb_player == "1":
-        computer[1] = True
+    computer = [False, True]
 
     begin = who_start(psi=0.5, backend_sim=backend_sim)
     print("A quantum process choose who starts... Human or Robot")
@@ -28,7 +24,6 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
         player1[0] = True
         print("Human starts")
     else:
-        player2[0] = True
         computer[0] = True
         print("Robot starts")
 
@@ -44,13 +39,10 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
 
         # Game
         while stick > 0:
-            if player1[0]:
-                player_name = player1[1]
-            else:
-                player_name = player2[1]
+            player_name = player1[1]
 
             # Player choice
-            if computer[1] is False or player1[0] is True:
+            if player1[0]:
                 print(player_name, "- You take : ")
                 control = False
                 while not control:
@@ -89,7 +81,7 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
                         drawing_add = "¬ " + drawing_add
 
             # Computer choice
-            if computer[0] is True and computer[1] is True:
+            if computer[0]:
                 print("The robot is thinking ...")
                 if stick == 1 and nb_qubit == 1:
                     qc_board.x(stick - 1)
@@ -128,16 +120,12 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
 
                 # Check circuit result
                 if stick < 1:
-                    if player1[0] and nb_player == "2":
-                        print(
-                            "\n\n##################\n  Player 2 win !\n##################"
-                        )
-                    if player2[0]:
+                    if computer[0]:
                         print(
                             "\n\n##################\n  Player 1 win !\n##################"
                         )
                         return "human", "robot"
-                    if computer[0] is False and computer[1] is True:
+                    if computer[0] is False:
                         print(
                             "\n\n##################\n  Machine win !\n##################"
                         )
@@ -152,7 +140,6 @@ def battle(player1: list, player2: list, backend_sim: Aer) -> Tuple:
             # Inverse turn
             if stick > 0:
                 draw.draw(stick, drawing_add)
-                player2[0] = not player2[0]
                 player1[0] = not player1[0]
                 if computer[1]:
                     computer[0] = not computer[0]

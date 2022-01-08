@@ -3,7 +3,7 @@ import math
 from qiskit import Aer, QuantumCircuit, execute
 
 
-def control_input(options: int, input_ctl: int) -> bool:
+def control_input(options: any, input_ctl: int) -> bool:
     """Function to control input of user.
     Args:
         options: limit of input

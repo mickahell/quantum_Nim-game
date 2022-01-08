@@ -14,7 +14,6 @@ class Game:
 
         # Init game parameters
         player1 = [False, "Player1"]
-        player2 = [False, "Player2"]
 
         print(
             """
@@ -27,7 +26,7 @@ class Game:
         """
         )
 
-        winner, _ = battle(player1, player2, backend_sim)
+        winner, _ = battle(player1, backend_sim)
 
         stats(winner)
 
