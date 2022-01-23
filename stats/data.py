@@ -23,7 +23,7 @@ def stats(winner: str):
             }
         }
 
-        r = requests.post(
+        requests.post(
             url="https://api.github.com/repos/mickahell/robots-data/dispatches",
             headers=headers,
             json=data
