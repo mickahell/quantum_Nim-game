@@ -15,11 +15,11 @@ This game is inspiring from the [Nim game](https://en.wikipedia.org/wiki/Nim). Y
            |
           /o\
 </pre>
-The goal is **NOT** take the last stick !!
+Turn by turn, each player take 1 to 3 sticks. The goal is to **NOT** take the last stick !!
 Originally, this game can be automatize by classical computer to always loose again a computer or against someone knowing [the strategy](https://en.wikipedia.org/wiki/Modular_arithmetic#Congruence).
 But what happens if we implement quantum rules ?
 
-Like the original game each player can take 1 to 3 sticks each turn but this time, they can say if they want to take the stick normally, put it in superposition or creating an entanglement between this stick and the sticks previously on the board (played before) :
+Like the original game each player can take 1 to 3 sticks each turn but this time, they can say if they want to take the stick normally, put it in superposition or creating an entanglement between this stick and the sticks previously taken :
 <table>
 	<thead>
 		<tr>
@@ -35,6 +35,12 @@ Like the original game each player can take 1 to 3 sticks each turn but this tim
 			<td align="center">stick left</td>
 			<td align="center">a simple sticks</td>
 			<td align="center">any action</td>
+		</tr>
+		<tr>
+			<td align="center">#</td>
+			<td align="center">history</td>
+			<td align="center">begin of the history of actions</td>
+			<td align="center">no action (only here for info)</td>
 		</tr>
 		<tr>
 			<td align="center">/</td>
