@@ -93,5 +93,5 @@ Batman choose 1 sticks
 When it doesn't have a stick anymore we run the circuit we create with the gates and get the result, for each qubit still at the state `|0>` we had 1 stick left.
 Then we continue wit the sticks remaning until we don't have stick at all after running the circuit.
 
-## AI
+## AI opponent
 A 1 player is available and you'll fight against a quantum ia made with a quadratical equation, QAOA and Grover.
