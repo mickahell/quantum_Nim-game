@@ -123,9 +123,9 @@ def quantum_ia(nb_stick: int, past: list, backend_sim: Aer) -> list:
         )
 
         # Format and print result
-        for cropHectares, cropName in zip(qaoa_result.x, qaoa_result.variable_names):
-            for i in range(int(cropHectares)):
-                final_result.append(cropName)
+        for numbGate, typeGate in zip(qaoa_result.x, qaoa_result.variable_names):
+            for i in range(int(numbGate)):
+                final_result.append(typeGate)
 
         return final_result
 
