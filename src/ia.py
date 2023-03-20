@@ -100,18 +100,18 @@ def quantum_ia(nb_stick: int, past: list, backend_sim: Aer) -> list:
         )
 
         # Mod4 constraints
-        if math.ceil(poten_stick % 4) - 0.5 > 0:
+        if math.ceil((poten_stick - 0.5) % 4) > 0:
             quadprog.linear_constraint(
                 linear={"x": 1, "sup": 1},
                 sense="<=",
-                rhs=math.ceil(poten_stick % 4),
+                rhs=math.ceil((poten_stick - 0.5) % 4),
                 name="qua_mod4",
             )
-        if nb_stick % 4 - 1 > 0:
+        if (nb_stick - 1) % 4 > 0:
             quadprog.linear_constraint(
                 linear={"x": 1, "sup": 1, "intric": 1},
                 sense="<=",
-                rhs=nb_stick % 4 - 1,
+                rhs=(nb_stick - 1) % 4,
                 name="cla_mod4",
             )
 
